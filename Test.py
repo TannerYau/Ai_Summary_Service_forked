@@ -6,7 +6,7 @@ url = 'http://127.0.0.1:5001/api/ai_summary_service'
 
 
 # Valid Test 1:
-exammple_data = {
+example_data = {
   "summary_length": "medium",
   "additional_info": "yes",
   "content": [
@@ -20,17 +20,17 @@ exammple_data = {
 }
 
 # sent post req
-response = requests.post(url, json=exammple_data)
+response = requests.post(url, json=example_data)
 print('Status code: ', response.status_code)
 print('Reponse JSON:', response.json())
 
 # Invalid Test 2:
-exammple_data = {
+example_data = {
   "summary_length": "medium",
   "additional_info": "yes",
 }
 
 # sent post req
-response = requests.post(url, json=exammple_data)
+response = requests.post(url, json=example_data)
 print('\n\nStatus code: ', response.status_code)
 print('Reponse JSON:', response.json())
